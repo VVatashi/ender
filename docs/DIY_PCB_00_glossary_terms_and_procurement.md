@@ -41,6 +41,12 @@
 | фотошаблон | photomask, artwork | прозрачная маска для экспонирования фоторезиста | `pcb photomask`, `uv artwork`, `фотошаблон для печатных плат` |
 | сухой фоторезист | dry film photoresist, `DFR` | рулонная сухая светочувствительная плёнка для плат | `dry film photoresist pcb`, `сухой фоторезист` |
 | жидкий фоторезист | liquid photoresist | жидкая светочувствительная маска для платы | `liquid photoresist pcb`, `жидкий фоторезист` |
+| лазерный фотоплоттер | laser photoplotter | станок, который рисует экспозицию светом без печатной плёнки | `laser photoplotter pcb`, `pcb laser exposure` |
+| прямая лазерная литография | direct laser lithography | безмасочное экспонирование резиста сфокусированным лучом | `direct laser lithography pcb`, `laser direct write pcb` |
+| лазерная абляция | laser ablation | удаление лазером резиста, краски, меди или части подложки | `laser ablation pcb`, `laser ablation copper foil` |
+| волоконный лазер | fiber laser | лазер, который в DIY-PCB чаще обсуждают для абляции меди, маски и тонких слоёв | `fiber laser pcb`, `fiber laser copper` |
+| гальво-голова | galvo, galvanometer scanner | быстрый сканер луча для лазерной маркировки и точной абляции | `galvo laser pcb`, `galvanometer scanner laser` |
+| лазерный модуль `405 nm` | `405 nm laser module` | маломощный фиолетовый/ближний UV-источник для экспонирования резиста | `405 nm laser module pcb`, `405nm laser photoresist` |
 | химическая металлизация меди | electroless copper plating | химическое осаждение тонкого медного seed-слоя без внешнего тока | `electroless copper plating pcb`, `химическая металлизация меди` |
 | гальваническое наращивание меди | electroplating, electrolytic copper plating | утолщение уже проводящего медного слоя с помощью тока | `electroplating copper pcb`, `electrolytic copper plating pcb` |
 | металлизация отверстий | plated through hole, `PTH` | проводящий слой на стенках отверстий двусторонней или многослойной платы | `plated through hole pcb`, `PTH pcb`, `металлизация отверстий` |
@@ -106,6 +112,7 @@
 | травитель | персульфат натрия / sodium persulfate | `Chip-Dip`: `https://www.chipdip.ru/catalog/popular/persulfat` ; `Ozon`: `https://www.ozon.ru/search/?text=%D0%BF%D0%B5%D1%80%D1%81%D1%83%D0%BB%D1%8C%D1%84%D0%B0%D1%82%20%D0%BD%D0%B0%D1%82%D1%80%D0%B8%D1%8F` | `AliExpress`: искать имеет смысл только как запасной вариант, обычно выгоднее локально |
 | свёрла для PCB | свёрла для печатных плат / PCB drill bits, tungsten carbide micro drills | `Chip-Dip`: `https://www.chipdip.ru/search?searchtext=%D1%81%D0%B2%D0%B5%D1%80%D0%BB%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BD%D1%8B%D1%85%20%D0%BF%D0%BB%D0%B0%D1%82` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=pcb%20drill%20bits%20tungsten%20carbide` |
 | UV-источник | УФ-лампа / UV nail lamp, UV exposure lamp | `Ozon`: `https://www.ozon.ru/search/?text=uv%20%D0%BB%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B9` ; `WB`: `https://www.wildberries.ru/catalog/0/search.aspx?search=uv%20%D0%BB%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B9` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=uv%20nail%20lamp` |
+| лазерный модуль `405 nm` | лазерный модуль `405 nm` / `405 nm laser module` | локально искать лучше по общему запросу, карточки сильно плавают по качеству и описанию | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=405nm%20laser%20module` |
 
 ### 2. Экспериментальная ветка
 
@@ -115,6 +122,7 @@
 | наборы для химической металлизации | electroless copper kit, PTH kit | локально встречаются нерегулярно, чаще проще искать по англоязычным названиям | `Google`: `electroless copper kit pcb`, `plated through hole kit pcb`, `Nano3D electroless copper kit`, `MG Chemicals 41600A` |
 | проводящий филамент | проводящий PLA / conductive PLA filament | `Ozon`: `https://www.ozon.ru/search/?text=%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D0%B9%20PLA` ; `WB`: `https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D0%B9%20pla` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=conductive%20pla%20filament` |
 | конкретный пример conductive PLA | conductive PLA filament | локальные площадки удобнее смотреть поиском | пример лота: `https://aliexpress.ru/item/1005006688614635.html` ; альтернативный лот: `https://aliexpress.ru/item/1005008837855530.html` |
+| лазерные защитные очки и аксессуары | laser safety goggles, enclosure exhaust | локально искать по длине волны и классу защиты, а не по слову "очки для лазера" вообще | `Google`: `laser safety goggles 405nm`, `fiber laser safety enclosure`, `laser fume extractor` |
 
 ### 3. Не-PCB ветка
 

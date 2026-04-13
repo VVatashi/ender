@@ -17,21 +17,22 @@
 
 - [docs/DIY_PCB_00_glossary_terms_and_procurement.md](docs/DIY_PCB_00_glossary_terms_and_procurement.md) - единая терминология `RU / EN`, поисковые слова и закупка
 
-## Что изменилось в логике серии
+## Как устроена серия
 
-Серия теперь чётче делится на три маршрута:
+Серия делится на три маршрута:
 
 1. `Практичный PCB-маршрут`
    Обычная плата, где принтер помогает как координатная и механическая платформа.
 2. `Экспериментальная ветка`
-   Фольга, химическая и гальваническая металлизация подложки, conductive plastic как основа под последующее наращивание металла.
+   Фольга, лазерная абляция, химическая и гальваническая металлизация подложки, conductive plastic как основа под последующее наращивание металла.
 3. `Не-PCB ветка`
    3D-подложки, `point-to-point`, `turret`, `eyelet`, `wire-wrap`, где 3D-печать используется прежде всего как механика.
 
-Это важно, потому что `химическая и гальваническая металлизация` теперь встроена не как случайная боковая заметка, а как отдельный гибридный этап между:
+Внутри практичного маршрута есть и `лазерная ветка`:
 
-- фольгой на подложке;
-- и идеей печатать сами проводники из conductive filament.
+- маломощные `405 nm / UV` лазеры и близкие фотоплоттерные схемы как способ `экспонирования фоторезиста`;
+- более мощные лазеры как `экспериментальная абляция` резиста, краски или тонкой меди;
+- очень мощные лазеры как `дорогой и рискованный` путь к прожигу отверстий и резке подложки.
 
 ## Если нужно быстро понять, с чего начинать
 
@@ -39,21 +40,24 @@
 
 1. [docs/DIY_PCB_01_overview_and_routes.md](docs/DIY_PCB_01_overview_and_routes.md)
 2. [docs/DIY_PCB_02_masks_stencils_and_direct_print.md](docs/DIY_PCB_02_masks_stencils_and_direct_print.md)
-3. [docs/DIY_PCB_03_drilling_two_sided_and_ender.md](docs/DIY_PCB_03_drilling_two_sided_and_ender.md)
-4. [docs/DIY_PCB_04_etching_chemistry_and_safety.md](docs/DIY_PCB_04_etching_chemistry_and_safety.md)
+3. [docs/DIY_PCB_02A_lasers_exposure_ablation_and_substrates.md](docs/DIY_PCB_02A_lasers_exposure_ablation_and_substrates.md)
+4. [docs/DIY_PCB_03_drilling_two_sided_and_ender.md](docs/DIY_PCB_03_drilling_two_sided_and_ender.md)
+5. [docs/DIY_PCB_04_etching_chemistry_and_safety.md](docs/DIY_PCB_04_etching_chemistry_and_safety.md)
 
 Если нужен обзор пределов метода и альтернатив:
 
-5. [docs/DIY_PCB_05_foil_and_experimental_methods.md](docs/DIY_PCB_05_foil_and_experimental_methods.md)
-6. [docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md](docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md)
-7. [docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md](docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md)
-8. [docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md](docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md)
+6. [docs/DIY_PCB_05_foil_and_experimental_methods.md](docs/DIY_PCB_05_foil_and_experimental_methods.md)
+7. [docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md](docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md)
+8. [docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md](docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md)
+9. [docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md](docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md)
 
 ## Короткий вывод серии
 
 Если формулировать совсем сжато:
 
 - `обычная PCB + 3D-печатная оснастка` остаётся главным домашним маршрутом;
+- `лазерное экспонирование` реально, но остаётся нишевым дополнением к фотохимическому пути;
+- `лазерная абляция меди, резиста и подложек` интересна, но в основном относится к дорогой и экспериментальной ветке;
 - `металлизация подложки` реальна, но относится к экспериментально-гибридной ветке;
 - `conductive filament` слаб как конечный проводник, но может быть интересен как `starter scaffold` под гальванику;
 - для крупной аналоговой, ламповой и силовой электроники 3D-печать чаще сильнее как `механика`, чем как способ делать дорожки.
