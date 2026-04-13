@@ -12,6 +12,7 @@
 Вся документация лежит в [`docs/`](docs/), а основной индекс находится здесь:
 
 - [docs/README.md](docs/README.md)
+- [docs/audits/](docs/audits/) - краткие аудиты по главам после научной вычитки
 
 Справочный вход:
 
@@ -28,11 +29,16 @@
 3. `Не-PCB ветка`
    3D-подложки, `point-to-point`, `turret`, `eyelet`, `wire-wrap`, где 3D-печать используется прежде всего как механика.
 
-За пределами базового маршрута, но рядом с ним, проходит и `лазерная ветка`:
+Поперёк базового маршрута проходит и `лазерная ветка`:
 
 - маломощные `405 nm / UV` лазеры и близкие фотоплоттерные схемы как способ `экспонирования фоторезиста`;
 - более мощные лазеры как `экспериментальная абляция` резиста, краски или тонкой меди;
 - очень мощные лазеры как `дорогой и рискованный` путь к прожигу отверстий и резке подложки.
+
+Между обычной `PCB`-фотохимией и этой лазерной веткой теперь отдельно вынесена и `домашняя литография`:
+
+- `фотошаблон + UV`, `3D-печатная UV-маска`, `SLA/MSLA` и безмасочные `DLP/DMD`-схемы как более широкая рамка работы со `световым рисунком`;
+- как мост между спокойным DIY-PCB и более далёкой `малобюджетной микрофабрикацией`.
 
 Ещё дальше находится отдельный горизонт: `металлопечать` мощным импульсным лазером по порошку и близкие промышленные схемы. Для этой серии это не часть практичного маршрута под `Ender`, а только будущая промышленно-лабораторная граница темы.
 
@@ -42,16 +48,17 @@
 
 1. [docs/DIY_PCB_01_overview_and_routes.md](docs/DIY_PCB_01_overview_and_routes.md)
 2. [docs/DIY_PCB_02_masks_stencils_and_direct_print.md](docs/DIY_PCB_02_masks_stencils_and_direct_print.md)
-3. [docs/DIY_PCB_02A_lasers_exposure_ablation_and_substrates.md](docs/DIY_PCB_02A_lasers_exposure_ablation_and_substrates.md)
-4. [docs/DIY_PCB_03_drilling_two_sided_and_ender.md](docs/DIY_PCB_03_drilling_two_sided_and_ender.md)
-5. [docs/DIY_PCB_04_etching_chemistry_and_safety.md](docs/DIY_PCB_04_etching_chemistry_and_safety.md)
+3. [docs/DIY_PCB_03_lasers_exposure_ablation_and_substrates.md](docs/DIY_PCB_03_lasers_exposure_ablation_and_substrates.md)
+4. [docs/DIY_PCB_04_home_lithography.md](docs/DIY_PCB_04_home_lithography.md)
+5. [docs/DIY_PCB_05_drilling_two_sided_and_ender.md](docs/DIY_PCB_05_drilling_two_sided_and_ender.md)
+6. [docs/DIY_PCB_06_etching_chemistry_and_safety.md](docs/DIY_PCB_06_etching_chemistry_and_safety.md)
 
 Если нужен обзор пределов метода и альтернатив:
 
-6. [docs/DIY_PCB_05_foil_and_experimental_methods.md](docs/DIY_PCB_05_foil_and_experimental_methods.md)
-7. [docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md](docs/DIY_PCB_05A_chemical_and_galvanic_metallization_of_substrates.md)
-8. [docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md](docs/DIY_PCB_06_conductive_filament_and_printed_conductors.md)
-9. [docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md](docs/DIY_PCB_07_3d_substrate_point_to_point_and_wire_wrap.md)
+7. [docs/DIY_PCB_07_foil_and_experimental_methods.md](docs/DIY_PCB_07_foil_and_experimental_methods.md)
+8. [docs/DIY_PCB_08_chemical_and_galvanic_metallization_of_substrates.md](docs/DIY_PCB_08_chemical_and_galvanic_metallization_of_substrates.md)
+9. [docs/DIY_PCB_09_conductive_filament_and_printed_conductors.md](docs/DIY_PCB_09_conductive_filament_and_printed_conductors.md)
+10. [docs/DIY_PCB_10_3d_substrate_point_to_point_and_wire_wrap.md](docs/DIY_PCB_10_3d_substrate_point_to_point_and_wire_wrap.md)
 
 ## Короткий вывод серии
 
@@ -59,8 +66,9 @@
 
 - `обычная PCB + 3D-печатная оснастка` остаётся главным домашним маршрутом;
 - `лазерное экспонирование` реально, но остаётся нишевым дополнением к фотохимическому пути;
+- `домашняя литография` полезна как более широкая рамка для `UV`, `SLA/MSLA`, `DLP/DMD` и других световых способов переноса рисунка;
 - `лазерная абляция меди, резиста и подложек` интересна, но в основном относится к дорогой и экспериментальной ветке;
 - `металлизация подложки` реальна, но относится к экспериментально-гибридной ветке;
-- `conductive filament` слаб как конечный проводник, но может быть интересен как `стартовый проводящий каркас` под гальванику;
+- `conductive filament` обычно слаб как конечный проводник; его разумнее рассматривать как специальный материал для сенсорных, резистивных и отдельных гибридных задач, включая каркас под последующую металлизацию;
 - `металлопечать` выглядит теоретически очень сильной по проводнику, но для этой серии остаётся далёкой промышленно-лабораторной границей;
 - для крупной аналоговой, ламповой и силовой электроники 3D-печать чаще сильнее как `механика`, чем как способ делать дорожки.

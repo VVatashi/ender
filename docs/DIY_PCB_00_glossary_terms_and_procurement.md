@@ -5,156 +5,208 @@
 Этот файл задаёт `единый словарь` для всей серии и собирает в одном месте:
 
 - рекомендуемые русские и английские термины;
-- поисковые формулировки для даташитов, форумов и маркетплейсов;
-- примеры ссылок на материалы и компоненты, которые можно искать на российских и международных площадках.
+- поисковые формулировки для даташитов, техдокументации и маркетплейсов;
+- стартовые запросы для поиска материалов и компонентов на локальных и международных площадках.
+
+Этот документ не заменяет стандарт или учебник по технологии `PCB`. Его цель более узкая: помочь не путать близкие термины, быстрее находить релевантные источники и не принимать маркетинговые описания за технические определения.
 
 Во всей серии удобно придерживаться такого правила:
 
 - основной термин в тексте давать по-русски;
-- при первом важном упоминании рядом давать английский эквивалент в скобках;
-- для поиска на маркетплейсах использовать и русский, и английский варианты.
+- при первом важном упоминании рядом давать английский эквивалент;
+- для поиска технической информации использовать прежде всего английский термин;
+- для закупки использовать и английский, и русский запрос.
 
-Практически этим файлом лучше пользоваться так:
+## Важная оговорка по ссылкам и доказательности
 
-1. читать основную главу серии;
-2. если термин звучит знакомо, но не до конца ясно, сверяться с таблицей ниже;
-3. если нужен зарубежный источник, брать английский термин;
-4. если нужен локальный поиск по площадкам, брать русский термин и связанный поисковый запрос.
+В этой редакции закупочная часть намеренно переведена из прямых marketplace-URL в `поисковые запросы`.
 
-## Важная оговорка по ссылкам
+Причины простые:
 
-Часть российских площадок (`Ozon`, `Wildberries`, `Chip-Dip`) активно используют `JavaScript` и антибот-защиту. Поэтому ниже ссылки часто даны не как "вечные карточки товара", а как:
+- карточки товара быстро исчезают или переезжают;
+- `Ozon`, `Wildberries` и часть локальных магазинов часто отдают антибот-защиту вместо стабильной страницы;
+- для закупки важнее воспроизводимый поисковый запрос, чем одноразовый лот;
+- ссылки на маркетплейсы и блоги допустимы здесь только как `иллюстрация практики`, а не как доказательство технических фактов.
 
-- `поисковые ссылки`;
-- `ссылки на категории`;
-- либо как устойчивые точки входа, которые обычно удобнее конкретного одноразового лота.
+Ниже таблица смешивает два уровня терминов:
 
-Для `AliExpress` удалось дополнительно привязать часть ссылок к живым поисковым страницам и нескольким конкретным лотам.
+- `устоявшиеся технические термины`;
+- `рабочие поисковые формулировки`, которые полезны для DIY-поиска, даже если они не всегда совпадают с самым строгим отраслевым названием.
 
 ## Единая терминология серии
 
+### Базовые PCB-термины и монтаж
+
 | Русский термин | English term | Как понимать в серии | Что вводить в поиск |
 | --- | --- | --- | --- |
-| печатная плата | printed circuit board, `PCB` | обычная плата с медными дорожками | `PCB`, `printed circuit board`, `печатная плата` |
-| медный ламинат, фольгированный стеклотекстолит | copper-clad laminate, copper-clad board | заготовка `FR4` или `FR1` с медной фольгой | `fr4 copper clad laminate`, `фольгированный стеклотекстолит` |
-| травильная маска | etch resist | любой слой, который защищает медь при травлении | `etch resist`, `pcb resist ink`, `травильная маска` |
-| фотошаблон | photomask, artwork | прозрачная маска для экспонирования фоторезиста | `pcb photomask`, `uv artwork`, `фотошаблон для печатных плат` |
-| сухой фоторезист | dry film photoresist, `DFR` | рулонная сухая светочувствительная плёнка для плат | `dry film photoresist pcb`, `сухой фоторезист` |
-| жидкий фоторезист | liquid photoresist | жидкая светочувствительная маска для платы | `liquid photoresist pcb`, `жидкий фоторезист` |
-| лазерный фотоплоттер | laser photoplotter | станок, который рисует экспозицию светом без печатной плёнки | `laser photoplotter pcb`, `pcb laser exposure` |
-| прямая лазерная литография | direct laser lithography | безмасочное экспонирование резиста сфокусированным лучом | `direct laser lithography pcb`, `laser direct write pcb` |
-| лазерная абляция | laser ablation | удаление лазером резиста, краски, меди или части подложки | `laser ablation pcb`, `laser ablation copper foil` |
-| волоконный лазер | fiber laser | лазер, который в DIY-PCB чаще обсуждают для абляции меди, маски и тонких слоёв | `fiber laser pcb`, `fiber laser copper` |
-| гальво-голова | galvo, galvanometer scanner | быстрый сканер луча для лазерной маркировки и точной абляции | `galvo laser pcb`, `galvanometer scanner laser` |
-| лазерный модуль `405 nm` | `405 nm laser module` | маломощный фиолетовый/ближний UV-источник для экспонирования резиста | `405 nm laser module pcb`, `405nm laser photoresist` |
-| печать металлом | metal 3D printing | аддитивное получение металлической детали или дорожки, а не печать полимером с последующей металлизацией | `metal 3d printing conductive traces`, `additive manufacturing metal conductor` |
-| лазерное спекание металлопорошка | laser sintering | спекание металлического порошка лазером как часть аддитивного процесса | `laser sintering metal powder`, `laser sintering conductive traces` |
-| лазерное плавление металлопорошка | laser melting | более жёсткий режим, где порошок именно плавится, а не только спекается | `laser melting copper powder`, `laser melting metal traces` |
-| плавление или сплавление в слое порошка | powder bed fusion, `PBF` | общий класс процессов, где лазер или иной источник работает по слою порошка | `powder bed fusion conductive structures`, `powder bed fusion copper` |
-| селективное лазерное плавление | selective laser melting, `SLM` | промышленный термин для лазерного плавления металлического порошка | `SLM copper traces`, `SLM conductive structure` |
-| прямое лазерное спекание металла | direct metal laser sintering, `DMLS` | промышленный термин для лазерного спекания или сплавления металлических порошков | `DMLS conductive traces`, `DMLS copper part` |
-| лазерное сплавление в слое порошка | laser powder bed fusion, `LPBF` | частный термин для порошковой лазерной аддитивной печати металлом | `LPBF copper conductor`, `LPBF conductive trace` |
-| химическая металлизация меди | electroless copper plating | химическое осаждение тонкого медного seed-слоя без внешнего тока | `electroless copper plating pcb`, `химическая металлизация меди` |
-| гальваническое наращивание меди | electroplating, electrolytic copper plating | утолщение уже проводящего медного слоя с помощью тока | `electroplating copper pcb`, `electrolytic copper plating pcb` |
-| металлизация отверстий | plated through hole, `PTH` | проводящий слой на стенках отверстий двусторонней или многослойной платы | `plated through hole pcb`, `PTH pcb`, `металлизация отверстий` |
+| печатная плата | printed circuit board, `PCB` | плата с проводящим рисунком и площадками для монтажа компонентов | `PCB`, `printed circuit board`, `печатная плата` |
+| медный ламинат, фольгированный стеклотекстолит | copper-clad laminate, copper-clad board | диэлектрическая заготовка, обычно `FR-4` или `FR-1`, покрытая медной фольгой | `fr4 copper clad laminate`, `copper clad board`, `фольгированный стеклотекстолит` |
+| сверловка | `Excellon`, `NC Drill` | формат данных сверления с координатами и диаметрами отверстий | `Excellon drill format`, `NC Drill pcb` |
+| регистрационные отверстия | tooling holes, registration holes | базовые отверстия для совмещения сторон, шаблонов или оснастки | `tooling holes pcb`, `registration holes pcb` |
+| сквозной монтаж | through-hole, `THT` | монтаж компонентов с выводами через отверстия | `through-hole`, `THT` |
+| поверхностный монтаж | surface mount, `SMT`; surface-mount device, `SMD` | монтаж компонентов на поверхность платы без длинных сквозных выводов | `SMT`, `SMD`, `surface mount` |
+
+### Фоторезист, фотошаблон и экспонирование
+
+| Русский термин | English term | Как понимать в серии | Что вводить в поиск |
+| --- | --- | --- | --- |
+| травильный резист, травильная маска | etch resist | временный защитный слой, который сохраняет медь на нужных участках при травлении | `etch resist`, `pcb resist ink`, `травильная маска` |
+| сухой фоторезист | dry film photoresist, `DFR` | сухая ламинируемая светочувствительная плёнка для плат и близких фотохимических процессов | `dry film photoresist pcb`, `dry film resist`, `сухой фоторезист` |
+| жидкий фоторезист | liquid photoresist, liquid photoimageable resist | жидкий или лакообразный фоторезист, наносимый на поверхность перед экспонированием | `liquid photoresist pcb`, `liquid photoimageable resist`, `жидкий фоторезист` |
+| фотошаблон | photomask, artwork | прозрачный или полупрозрачный носитель рисунка для экспонирования фоторезиста | `pcb photomask`, `pcb artwork film`, `фотошаблон для печатных плат` |
+| фотолитография | photolithography | перенос рисунка на светочувствительный резист с последующей химической обработкой | `photolithography pcb`, `pcb photoresist process`, `фотолитография` |
+| контактное экспонирование | contact exposure, contact printing | экспонирование через фотошаблон, прижатый к резисту | `contact exposure pcb`, `contact printing photoresist` |
+| проекционная литография | projection lithography | перенос рисунка через оптическую проекцию, а не прямым контактом маски с заготовкой | `projection lithography`, `projection lithography pcb` |
+| фотоплоттер | photoplotter, laser photoplotter | система, формирующая фотошаблон или рисунок экспонирования напрямую из цифровых данных | `pcb photoplotter`, `laser photoplotter pcb` |
+| литографический степпер | lithography stepper | установка, экспонирующая рисунок по полям с точным позиционированием | `lithography stepper`, `stepper lithography` |
+| стыковка полей | tiling, stitching | сборка большого рисунка из нескольких полей экспозиции или записи | `lithography tiling`, `stitching lithography` |
+| репер, маркер совмещения | fiducial, fiducial marker | ориентир для регистрации и совмещения рисунка, сторон платы или шаблонов | `fiducial pcb`, `fiducial marker lithography` |
+| критический размер | critical dimension, `CD` | минимальный контролируемый размер элемента, воспроизводимый данным процессом | `critical dimension photolithography`, `CD lithography` |
+| числовая апертура | numerical aperture, `NA` | параметр оптической системы, влияющий на разрешение и глубину фокуса | `numerical aperture lithography`, `NA objective` |
+
+### Безмасочная и лазерная обработка
+
+| Русский термин | English term | Как понимать в серии | Что вводить в поиск |
+| --- | --- | --- | --- |
+| безмасочная фотолитография | maskless photolithography | формирование рисунка без физического фотошаблона, через цифровое экспонирование | `maskless photolithography`, `maskless lithography pcb` |
+| система безмасочного экспонирования | maskless lithography system, direct imaging system | безмасочная система, формирующая рисунок программно и оптически | `maskless lithography system`, `direct imaging photoresist` |
+| `DLP` | digital light processing, `DLP` | проекционная схема с цифровым управлением световым рисунком | `DLP photolithography`, `DLP direct imaging` |
+| `DMD` | digital micromirror device, `DMD` | матрица микрозеркал, которая может служить программируемой световой маской в `DLP`-системах | `DMD photolithography`, `DMD projection lithography` |
+| прямая лазерная запись | direct laser writing, direct laser lithography | безмасочное экспонирование или локальная обработка резиста сфокусированным лазерным лучом | `direct laser writing pcb`, `direct laser lithography pcb` |
+| лазерная абляция | laser ablation | удаление лазером резиста, покрытия, тонкого металлического слоя или части подложки | `laser ablation pcb`, `laser ablation copper foil` |
+| волоконный лазер | fiber laser | класс лазеров, часто используемый для маркировки, абляции и точной обработки металлов | `fiber laser pcb`, `fiber laser copper` |
+| гальво-сканер, гальво-голова | galvo, galvanometer scanner | быстрый сканер луча, характерный для маркировочных и некоторых абляционных лазерных систем | `galvo laser`, `galvanometer scanner laser` |
+| лазерный модуль `405 nm` | `405 nm laser module` | фиолетовый диодный источник на границе видимого диапазона и `UVA`; пригодность для экспонирования зависит от спектральной чувствительности конкретного резиста | `405 nm laser module`, `405 nm photoresist exposure` |
+
+### Металлизация и металлическое аддитивное производство
+
+| Русский термин | English term | Как понимать в серии | Что вводить в поиск |
+| --- | --- | --- | --- |
+| химическая металлизация меди | electroless copper plating | химическое осаждение тонкого проводящего слоя без внешнего тока | `electroless copper plating pcb`, `химическая металлизация меди` |
 | затравочный слой | seed layer | первый тонкий проводящий слой перед гальваническим утолщением | `seed layer electroless copper`, `затравочный слой металлизация` |
-| сверловка | `Excellon`, `NC Drill` | файл координат и диаметров отверстий | `Excellon drill`, `NC Drill`, `сверловка Excellon` |
-| регистрационные отверстия | tooling holes, registration holes | базовые отверстия для совмещения сторон и шаблонов | `tooling holes pcb`, `registration holes pcb`, `регистрационные отверстия` |
-| сквозной монтаж | through-hole, `THT` | монтаж выводных компонентов | `through-hole`, `THT` |
-| поверхностный монтаж | surface mount, `SMD/SMT` | монтаж без длинных выводов | `SMD`, `SMT`, `surface mount` |
-| макетная плата | perfboard, protoboard | перфорированная плата для ручного монтажа | `perfboard`, `protoboard`, `макетная плата` |
-| монтаж навесом | point-to-point wiring | соединение напрямую проводами и выводами | `point-to-point wiring`, `point-to-point construction` |
-| монтаж навивкой | wire-wrap | соединение проводом, намотанным на квадратный штырь | `wire-wrap`, `wire wrapping tool`, `монтаж навивкой` |
-| турретная стойка | turret terminal, turret lug | металлическая стойка для ручного монтажа | `turret terminal`, `turret board terminal`, `турретная стойка` |
-| люверс | eyelet terminal, eyelet | металлический глазок для платы или монтажной планки | `eyelet terminal`, `pcb eyelet`, `люверс для платы` |
-| клеммная колодка | terminal block, barrier strip | винтовая или барьерная колодка для соединений | `terminal block`, `barrier strip`, `клеммник` |
-| медная лента | copper foil tape, copper tape | клейкая медная лента или фольга | `copper foil tape`, `conductive copper tape`, `медная лента` |
-| проводящий филамент, проводящий пластик | conductive filament, conductive PLA | филамент с углеродным наполнителем | `conductive pla filament`, `conductive filament`, `проводящий PLA` |
-| проводящий пластик как основа под гальванику | conductive substrate for plating, selective electroplating on conductive traces | проводящий полимер не как финальный проводник, а как стартовый путь для селективного наращивания металла | `conductive substrate for electroplating`, `selective electroplating conductive traces`, `electroplating conductive filament` |
-| закладная латунная втулка | brass insert, heat-set insert | латунная вставка в пластик для механики и иногда контактов | `heat-set insert`, `brass insert`, `латунная втулка` |
-| персульфат натрия | sodium persulfate | один из самых удобных бытовых травителей | `sodium persulfate pcb`, `персульфат натрия` |
-| хлорное железо | ferric chloride, `FeCl3` | классический травитель, но очень грязный в быту | `ferric chloride pcb`, `хлорное железо` |
+| гальваническое наращивание меди | electroplating, electrolytic copper plating | утолщение уже существующего проводящего слоя с помощью внешнего тока | `electroplating copper pcb`, `electrolytic copper plating pcb` |
+| металлизация отверстий | plated through hole, `PTH` | проводящий слой на стенках отверстий двусторонней или многослойной платы | `plated through hole pcb`, `PTH pcb`, `металлизация отверстий` |
+| аддитивное изготовление металлом | metal additive manufacturing, metal 3D printing | аддитивное получение металлической детали или проводящей структуры, а не печать полимером с последующей металлизацией | `metal additive manufacturing conductor`, `metal 3d printing conductive traces` |
+| порошковое сплавление | powder bed fusion, `PBF` | семейство аддитивных процессов, где энергия подводится к слою порошка; источник может быть лазерным или электронно-лучевым | `powder bed fusion copper`, `powder bed fusion conductive structure` |
+| лазерное сплавление в слое порошка | laser powder bed fusion, `LPBF` | частный случай `PBF`, где слой порошка обрабатывается лазером | `LPBF copper conductor`, `laser powder bed fusion copper` |
+| селективное лазерное плавление | selective laser melting, `SLM` | широко употребимый промышленный термин для одного из вариантов `LPBF`; в литературе употребление не всегда строго унифицировано | `SLM copper`, `selective laser melting copper` |
+| прямое лазерное спекание металла | direct metal laser sintering, `DMLS` | коммерчески закрепившийся термин, который на практике часто используют для `LPBF`-процессов по металлу, даже когда режим ближе к плавлению, чем к классическому спеканию | `DMLS copper`, `direct metal laser sintering conductor` |
 
-## Термины, которые лучше больше не путать
+### Альтернативный монтаж, проводящие материалы и фурнитура
 
-- `травильная маска (etch resist)` не равна `паяльной маске (solder mask)`.
-- `фотошаблон (photomask)` не равен `трафарету для паяльной пасты (solder paste stencil)`.
+| Русский термин | English term | Как понимать в серии | Что вводить в поиск |
+| --- | --- | --- | --- |
+| макетная плата | perfboard, protoboard | перфорированная плата для ручного монтажа и прототипирования | `perfboard`, `protoboard`, `макетная плата` |
+| монтаж навесом | point-to-point wiring, point-to-point construction | соединение компонентных выводов и проводов напрямую без печатного проводящего рисунка | `point-to-point wiring`, `point-to-point construction` |
+| монтаж навивкой | wire-wrap | соединение проводом, навитым на квадратный штырь без пайки в самой точке контакта | `wire-wrap`, `wire wrapping tool`, `монтаж навивкой` |
+| турретная стойка | turret terminal, turret lug | металлическая стойка или лепесток для ручного монтажа и межсоединений | `turret terminal`, `turret board terminal` |
+| люверс | eyelet terminal, eyelet | металлический глазок или втулка для крепления и иногда для формирования монтажной точки | `eyelet terminal`, `pcb eyelet` |
+| клеммная колодка | terminal block, barrier strip | винтовая или барьерная колодка для соединений и вывода проводов | `terminal block`, `barrier strip`, `клеммник` |
+| медная лента | copper foil tape, copper tape | клейкая медная лента или фольга; электропроводность клеевого слоя зависит от конкретного изделия | `copper foil tape`, `conductive adhesive copper tape`, `медная лента` |
+| проводящий филамент, проводящий пластик | conductive filament | полимерный композитный филамент с проводящими наполнителями; в hobby-FDM это часто, но не всегда, угленаполненный `PLA` | `conductive filament`, `conductive PLA`, `carbon-filled PLA filament` |
+| проводящий пластик как основа под гальванику | conductive substrate for plating, electroplating conductive traces | проводящий полимер или композит не как финальный проводник, а как стартовый путь для последующего наращивания металла | `conductive substrate for electroplating`, `electroplating conductive filament` |
+| закладная латунная втулка | brass insert, heat-set insert | резьбовая вставка для термовпрессовки в пластик; основное применение механическое, а не электротехническое | `heat-set insert`, `brass insert` |
+
+### Химия для DIY-PCB
+
+| Русский термин | English term | Как понимать в серии | Что вводить в поиск |
+| --- | --- | --- | --- |
+| персульфат натрия | sodium persulfate | распространённый травитель для меди в `PCB`-практике | `sodium persulfate pcb`, `персульфат натрия` |
+| хлорное железо | ferric chloride, `FeCl3` | традиционный травитель для меди в `PCB`-практике | `ferric chloride pcb`, `хлорное железо` |
+
+## Термины, которые лучше не путать
+
+### PCB и монтаж
+
 - `макетная плата (perfboard)` не равна `печатной плате (PCB)`.
-- `проводящий пластик (conductive filament)` не равен `металлизации` и не равен `медной дорожке`.
+- `травильный резист (etch resist)` не равен `паяльной маске (solder mask)`.
+- `фотошаблон (photomask)` не равен `трафарету для паяльной пасты (solder paste stencil)`.
+
+### Фотолитография и лазерные методы
+
+- `фотолитография (photolithography)` не равна `лазерной абляции (laser ablation)`: первая формирует рисунок на резисте, вторая удаляет материал.
+- `безмасочная фотолитография (maskless photolithography)` не равна `аддитивному изготовлению металлом (metal additive manufacturing)`.
+- `SLA/MSLA` как `источник экспонирования` не равен `SLA`-печати готовой детали: в одном случае важен световой рисунок, в другом - послойное формирование полимерной геометрии.
+- `405 nm` лазер не стоит автоматически считать универсальным `UV`-источником для любого резиста: нужна проверка спектральной чувствительности конкретного материала.
+
+### Металлизация и проводящие материалы
+
 - `химическая металлизация (electroless plating)` не равна `гальванике (electroplating)`: первая создаёт стартовый проводящий слой, вторая его утолщает.
-- `3D-подложка` в этой серии означает именно `механическую основу`, а не автоматически готовую электрическую плату.
-
-## Иллюстративные примеры
-
-Ниже не "идеальные товары", а просто наглядные примеры того, как обычно выглядят типовые позиции.
-
-### Проводящий PLA-филамент
-
-![Проводящий PLA-филамент: пример карточки товара](https://ae01.alicdn.com/kf/S877132b3e4944856bdc8313d9d855ebeG.jpg)
-
-Пример карточки: `AliExpress`
-
-- `https://aliexpress.ru/item/1005006688614635.html`
-
-### Типичный расходник для 3D-печати и электроники на маркетплейсе
-
-![Типичный товар из ветки DIY-электроники на AliExpress](https://ae01.alicdn.com/kf/Sdbff8335d756475b89466e21cede161fC.jpg)
-
-Эту картинку лучше воспринимать как иллюстрацию формата лота, а не как рекомендацию без проверки.
+- `проводящий филамент (conductive filament)` не равен `медной дорожке` и не равен `металлизации`.
+- `DMLS`, `SLM` и `LPBF` в литературе часто пересекаются по употреблению; для технически аккуратного текста безопаснее сначала указывать семейство `PBF/LPBF`, а уже потом конкретный рыночный термин.
 
 ## Что и где искать
 
-Эта часть не заменяет полноценный подбор поставщика, но помогает быстро стартовать:
-
-- понять, какие типы товаров вообще существуют;
-- как именно они обычно называются на российских и зарубежных площадках;
-- и какие категории имеет смысл проверять в первую очередь.
+Эта часть не заменяет выбор поставщика и не гарантирует качество товара. Её лучше воспринимать как стартовый список поисковых запросов.
 
 ### 1. Практичный PCB-маршрут
 
-| Что нужно | Русский / English | Российские площадки | Международные площадки |
+| Что нужно | Русский / English | Где искать | Поисковый запрос и примечание |
 | --- | --- | --- | --- |
-| заготовка платы | фольгированный стеклотекстолит / copper-clad laminate | `Ozon`: `https://www.ozon.ru/search/?text=%D1%84%D0%BE%D0%BB%D1%8C%D0%B3%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9%20%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D1%82` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=fr4%20copper%20clad%20laminate%20board` |
-| сухой фоторезист | сухой фоторезист / dry film photoresist | `Ozon`: `https://www.ozon.ru/category/fotorezist-dlya-pechatnyh-plat/` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=dry%20film%20photoresist%20pcb` |
-| травитель | персульфат натрия / sodium persulfate | `Chip-Dip`: `https://www.chipdip.ru/catalog/popular/persulfat` ; `Ozon`: `https://www.ozon.ru/search/?text=%D0%BF%D0%B5%D1%80%D1%81%D1%83%D0%BB%D1%8C%D1%84%D0%B0%D1%82%20%D0%BD%D0%B0%D1%82%D1%80%D0%B8%D1%8F` | `AliExpress`: искать имеет смысл только как запасной вариант, обычно выгоднее локально |
-| свёрла для PCB | свёрла для печатных плат / PCB drill bits, tungsten carbide micro drills | `Chip-Dip`: `https://www.chipdip.ru/search?searchtext=%D1%81%D0%B2%D0%B5%D1%80%D0%BB%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BD%D1%8B%D1%85%20%D0%BF%D0%BB%D0%B0%D1%82` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=pcb%20drill%20bits%20tungsten%20carbide` |
-| UV-источник | УФ-лампа / UV nail lamp, UV exposure lamp | `Ozon`: `https://www.ozon.ru/search/?text=uv%20%D0%BB%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B9` ; `WB`: `https://www.wildberries.ru/catalog/0/search.aspx?search=uv%20%D0%BB%D0%B0%D0%BC%D0%BF%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B9` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=uv%20nail%20lamp` |
-| лазерный модуль `405 nm` | лазерный модуль `405 nm` / `405 nm laser module` | локально искать лучше по общему запросу, карточки сильно плавают по качеству и описанию | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=405nm%20laser%20module` |
+| заготовка платы | фольгированный стеклотекстолит / copper-clad laminate | `Ozon`, `Chip-Dip`, `AliExpress`, локальные поставщики материалов | `фольгированный стеклотекстолит`, `fr4 copper clad laminate board` |
+| сухой фоторезист | сухой фоторезист / dry film photoresist | `Ozon`, `AliExpress`, PCB-химия и радиомагазины | `сухой фоторезист`, `dry film photoresist pcb` |
+| UV-источник | УФ-лампа / UV exposure lamp | `Ozon`, `WB`, `AliExpress` | `uv exposure lamp`, `uv nail lamp`; длину волны и спектр лучше проверять отдельно |
+| лазерный модуль `405 nm` | лазерный модуль `405 nm` / `405 nm laser module` | `AliExpress`, лазерные магазины, локальные продавцы модулей | `405 nm laser module`; совместимость с резистом надо подтверждать даташитом или практическими тестами |
+| травитель | персульфат натрия / sodium persulfate; хлорное железо / ferric chloride | `Chip-Dip`, локальные химические поставщики, `Ozon` | `персульфат натрия`, `sodium persulfate pcb`, `ferric chloride pcb` |
+| свёрла для PCB | свёрла для печатных плат / PCB drill bits, tungsten carbide micro drills | `Chip-Dip`, `AliExpress`, инструментальные поставщики | `pcb drill bits tungsten carbide`, `сверла для печатных плат` |
 
 ### 2. Экспериментальная ветка
 
-| Что нужно | Русский / English | Российские площадки | Международные площадки |
+| Что нужно | Русский / English | Где искать | Поисковый запрос и примечание |
 | --- | --- | --- | --- |
-| медная лента | медная лента / copper foil tape | `Ozon`: `https://www.ozon.ru/search/?text=%D0%BC%D0%B5%D0%B4%D0%BD%D0%B0%D1%8F%20%D0%BB%D0%B5%D0%BD%D1%82%D0%B0` ; `WB`: `https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%BC%D0%B5%D0%B4%D0%BD%D0%B0%D1%8F%20%D0%BB%D0%B5%D0%BD%D1%82%D0%B0` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=copper%20foil%20tape%20conductive%20adhesive` |
-| наборы для химической металлизации | electroless copper kit, PTH kit | локально встречаются нерегулярно, чаще проще искать по англоязычным названиям | `Google`: `electroless copper kit pcb`, `plated through hole kit pcb`, `Nano3D electroless copper kit`, `MG Chemicals 41600A` |
-| проводящий филамент | проводящий PLA / conductive PLA filament | `Ozon`: `https://www.ozon.ru/search/?text=%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D0%B9%20PLA` ; `WB`: `https://www.wildberries.ru/catalog/0/search.aspx?search=%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D1%8F%D1%89%D0%B8%D0%B9%20pla` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=conductive%20pla%20filament` |
-| конкретный пример conductive PLA | conductive PLA filament | локальные площадки удобнее смотреть поиском | пример лота: `https://aliexpress.ru/item/1005006688614635.html` ; альтернативный лот: `https://aliexpress.ru/item/1005008837855530.html` |
-| лазерные защитные очки и аксессуары | laser safety goggles, enclosure exhaust | локально искать по длине волны и классу защиты, а не по слову "очки для лазера" вообще | `Google`: `laser safety goggles 405nm`, `fiber laser safety enclosure`, `laser fume extractor` |
+| наборы для химической металлизации | electroless copper kit, PTH kit | поставщики химии для `PCB`, производители наборов, инженерный поиск | `electroless copper kit pcb`, `plated through hole kit pcb`, `electroless copper plating kit` |
+| медная лента | медная лента / copper foil tape | `Ozon`, `WB`, `AliExpress`, поставщики EMI-материалов | `медная лента`, `copper foil tape conductive adhesive`; проводимость клея зависит от конкретного продукта |
+| проводящий филамент | conductive filament, conductive PLA | `Ozon`, `WB`, `AliExpress`, производители филамента | `conductive filament`, `conductive PLA`, `carbon-filled PLA filament` |
+| защитные очки и аксессуары для лазера | laser safety goggles, enclosure, fume extraction | специализированные лазерные магазины и инженерный поиск | `laser safety goggles 405nm`, `laser enclosure`, `laser fume extractor` |
 
 ### 3. Не-PCB ветка
 
-| Что нужно | Русский / English | Российские площадки | Международные площадки |
+| Что нужно | Русский / English | Где искать | Поисковый запрос и примечание |
 | --- | --- | --- | --- |
-| макетная плата | макетная плата / perfboard, protoboard | `Ozon`: `https://www.ozon.ru/search/?text=%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B0` ; `Chip-Dip`: `https://www.chipdip.ru/search?searchtext=%D0%BC%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%B0%D1%82%D0%B0` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=perfboard%20protoboard` |
-| клеммники | клеммник / terminal block, barrier strip | `Chip-Dip`: `https://www.chipdip.ru/search?searchtext=%D0%BA%D0%BB%D0%B5%D0%BC%D0%BC%D0%BD%D0%B8%D0%BA` ; `Ozon`: `https://www.ozon.ru/search/?text=%D0%BA%D0%BB%D0%B5%D0%BC%D0%BC%D0%BD%D0%B8%D0%BA` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=terminal%20block%20barrier%20strip` |
-| инструмент и провод для навивки | монтаж навивкой / wire-wrap tool, wire-wrap wire | локально встречается нерегулярно, проще искать по словам `wire-wrap` и `навивка` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=wire%20wrap%20tool` |
-| турреты | турретная стойка / turret terminal | на локальных площадках встречается редко, часто проще искать по словам `turret terminal` | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=turret%20terminal%20board` |
-| люверсы | люверс для платы / eyelet terminal | локально часто продаются как крепёж, а не как радиоэлектронный компонент | `AliExpress`: `https://www.aliexpress.ru/wholesale?SearchText=eyelet%20terminal%20board` |
+| макетная плата | макетная плата / perfboard, protoboard | `Ozon`, `Chip-Dip`, `AliExpress` | `макетная плата`, `perfboard`, `protoboard` |
+| клеммники | клеммник / terminal block, barrier strip | `Chip-Dip`, `Ozon`, `AliExpress` | `клеммник`, `terminal block`, `barrier strip` |
+| турреты | турретная стойка / turret terminal | `AliExpress`, магазины ламповой электроники и монтажной фурнитуры | `turret terminal`, `turret board terminal` |
+| люверсы | люверс для платы / eyelet terminal | `AliExpress`, магазины крепежа и радиодеталей | `eyelet terminal`, `pcb eyelet` |
+| инструмент и провод для навивки | wire-wrap tool, wire-wrap wire | `AliExpress`, винтажные и специализированные магазины, инженерный поиск | `wire-wrap tool`, `wire-wrap wire`, `монтаж навивкой` |
 
 ## Практические замечания по закупке
 
-- Для `химии` и расходников вроде `персульфата натрия` локальные поставщики обычно удобнее по срокам и предсказуемости.
-- Для `PCB-свёрл`, `сухого фоторезиста`, `медной ленты` и особенно `turret / eyelet / wire-wrap` выбор на `AliExpress` обычно шире.
-- Для `conductive PLA` особенно важно читать не только карточку товара, но и `datasheet`, потому что надпись "проводящий" почти ничего не гарантирует.
-- Для `FR4`, `медной ленты` и `макетных плат` российские маркетплейсы полезны как быстрый старт, но наименование товара там часто слишком размыто, поэтому английские поисковые слова всё равно нужны.
+### По каналам закупки
+
+- Для химии и расходников вроде травителей, обезжиривателей и базовых ламп локальные поставщики часто удобнее по срокам и вопросам доставки.
+- Для `PCB`-свёрл, сухого фоторезиста, проводящего филамента и фурнитуры типа `turret`, `eyelet`, `wire-wrap` выбор на международных площадках обычно шире.
+
+### Что проверять в карточке товара
+
+- Для `conductive filament` почти всегда нужно читать не только карточку товара, но и `datasheet`: сам ярлык "conductive" не говорит ни о реальном удельном сопротивлении, ни о повторяемости свойств.
+- Для медной ленты стоит отдельно проверять, проводит ли клей по всей площади, только по оси `Z`, или вообще не является проводящим.
+- Для `405 nm`-источников, `UV`-ламп и лазерных очков нельзя опираться только на название товара: важны длина волны, оптическая мощность, спектр и заявленные защитные характеристики.
 
 ## Как это использовать дальше
 
 При чтении остальных файлов серии удобно делать так:
 
-1. читать русское объяснение в основном документе;
+1. читать русское объяснение в основной главе;
 2. брать английский термин из этого глоссария;
-3. искать по английскому названию `datasheet`, `forum`, `application note` и зарубежные лоты;
-4. искать по русскому названию на `Ozon`, `WB` и `Chip-Dip`.
+3. искать по английскому названию `datasheet`, `application note`, `technical note`, `forum`;
+4. для закупки брать из таблиц выше не старую ссылку, а сам поисковый запрос.
 
-В логике всей серии этот файл лучше воспринимать как `приложение`, к которому удобно возвращаться, а не как главу, которую нужно учить отдельно.
+В логике всей серии этот файл лучше воспринимать как `рабочее приложение`, к которому удобно возвращаться, а не как самостоятельную теоретическую главу.
+
+## Источники
+
+### Технические и терминологические
+
+- `NIST`, `Powder Bed Fusion`: `https://www.nist.gov/additive-manufacturing/research-areas/technologies/powder-bed-fusion`
+- `Proto-pasta`, `Conductive PLA`: `https://proto-pasta.com/pages/conductive-pla`
+- `Texas Instruments`, `DLP chip overview`: `https://www.ti.com/dlp-chip/overview.html`
+- `Texas Instruments`, `DLP7000` product page (`DMD` terminology): `https://www.ti.com/product/DLP7000`
+- `Ucamco`, `Excellon format`: `https://www.ucamco.com/en/file-formats/excellon`
+
+### Прикладные и производственные
+
+- `JLCPCB`, `Copper plating of the PCB board`: `https://jlcpcb.com/blog/copper-plating-of-the-pcb-board`
+
+### Иллюстративные и закупочные
+
+- Поисковые запросы в таблицах выше подготовлены как устойчивые точки входа вместо прямых marketplace-URL, которые часто ломаются из-за антибот-защиты, миграции карточек и устаревших лотов.
