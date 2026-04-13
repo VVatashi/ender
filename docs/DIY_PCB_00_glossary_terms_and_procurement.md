@@ -47,6 +47,13 @@
 | волоконный лазер | fiber laser | лазер, который в DIY-PCB чаще обсуждают для абляции меди, маски и тонких слоёв | `fiber laser pcb`, `fiber laser copper` |
 | гальво-голова | galvo, galvanometer scanner | быстрый сканер луча для лазерной маркировки и точной абляции | `galvo laser pcb`, `galvanometer scanner laser` |
 | лазерный модуль `405 nm` | `405 nm laser module` | маломощный фиолетовый/ближний UV-источник для экспонирования резиста | `405 nm laser module pcb`, `405nm laser photoresist` |
+| печать металлом | metal 3D printing | аддитивное получение металлической детали или дорожки, а не печать полимером с последующей металлизацией | `metal 3d printing conductive traces`, `additive manufacturing metal conductor` |
+| лазерное спекание металлопорошка | laser sintering | спекание металлического порошка лазером как часть аддитивного процесса | `laser sintering metal powder`, `laser sintering conductive traces` |
+| лазерное плавление металлопорошка | laser melting | более жёсткий режим, где порошок именно плавится, а не только спекается | `laser melting copper powder`, `laser melting metal traces` |
+| плавление или сплавление в слое порошка | powder bed fusion, `PBF` | общий класс процессов, где лазер или иной источник работает по слою порошка | `powder bed fusion conductive structures`, `powder bed fusion copper` |
+| селективное лазерное плавление | selective laser melting, `SLM` | промышленный термин для лазерного плавления металлического порошка | `SLM copper traces`, `SLM conductive structure` |
+| прямое лазерное спекание металла | direct metal laser sintering, `DMLS` | промышленный термин для лазерного спекания или сплавления металлических порошков | `DMLS conductive traces`, `DMLS copper part` |
+| лазерное сплавление в слое порошка | laser powder bed fusion, `LPBF` | частный термин для порошковой лазерной аддитивной печати металлом | `LPBF copper conductor`, `LPBF conductive trace` |
 | химическая металлизация меди | electroless copper plating | химическое осаждение тонкого медного seed-слоя без внешнего тока | `electroless copper plating pcb`, `химическая металлизация меди` |
 | гальваническое наращивание меди | electroplating, electrolytic copper plating | утолщение уже проводящего медного слоя с помощью тока | `electroplating copper pcb`, `electrolytic copper plating pcb` |
 | металлизация отверстий | plated through hole, `PTH` | проводящий слой на стенках отверстий двусторонней или многослойной платы | `plated through hole pcb`, `PTH pcb`, `металлизация отверстий` |
@@ -63,7 +70,7 @@
 | клеммная колодка | terminal block, barrier strip | винтовая или барьерная колодка для соединений | `terminal block`, `barrier strip`, `клеммник` |
 | медная лента | copper foil tape, copper tape | клейкая медная лента или фольга | `copper foil tape`, `conductive copper tape`, `медная лента` |
 | проводящий филамент, проводящий пластик | conductive filament, conductive PLA | филамент с углеродным наполнителем | `conductive pla filament`, `conductive filament`, `проводящий PLA` |
-| conductive plastic как основа под гальванику | conductive substrate for plating, selective electroplating on conductive traces | проводящий полимер не как финальный проводник, а как стартовый путь для селективного наращивания металла | `conductive substrate for electroplating`, `selective electroplating conductive traces`, `electroplating conductive filament` |
+| проводящий пластик как основа под гальванику | conductive substrate for plating, selective electroplating on conductive traces | проводящий полимер не как финальный проводник, а как стартовый путь для селективного наращивания металла | `conductive substrate for electroplating`, `selective electroplating conductive traces`, `electroplating conductive filament` |
 | закладная латунная втулка | brass insert, heat-set insert | латунная вставка в пластик для механики и иногда контактов | `heat-set insert`, `brass insert`, `латунная втулка` |
 | персульфат натрия | sodium persulfate | один из самых удобных бытовых травителей | `sodium persulfate pcb`, `персульфат натрия` |
 | хлорное железо | ferric chloride, `FeCl3` | классический травитель, но очень грязный в быту | `ferric chloride pcb`, `хлорное железо` |
